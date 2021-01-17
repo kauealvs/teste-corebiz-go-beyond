@@ -11,7 +11,7 @@ function makeShowcase(products) {
         const quatity = products[i].installments["quantity"];
         const value = products[i].installments.value;
         const div = document.createElement('div');
-        div.className = 'hero';
+        div.className = 'product';
         div.innerHTML = `
          <a href="#" target="_blank">
             <img src="${image}" alt="${productName}">
