@@ -1,0 +1,40 @@
+@media only screen and (max-width: 320px){
+    nav ul li input{
+        width: 10vh;
+    }
+
+    nav ul .my-account {
+        display: none;
+    }
+
+    section .slideshow .slide h1,
+    section .slideshow .slide h2 {
+        width: 100vh;
+        font-weight: 900;
+        font-size: 30px;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+    footer {
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 27px 17px;
+    }
+    footer .contact {
+        margin: 27px auto;
+    }
+    footer .contact ul {
+        display: flex;
+    }
+    footer .created {
+        margin: 0 auto;
+        width: 224px;
+        justify-content: space-between;
+    }
+}

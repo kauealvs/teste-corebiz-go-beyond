@@ -8,8 +8,7 @@
 }
 
 body {
-    width: 100%;
-    
+    width: 100%;  
 }
 
 /*/////////////////////////////////////////////////////////////////////////
@@ -17,6 +16,7 @@ body {
 /////////////////////////////////////////////////////////////////////////*/
 
 nav{
+  width: 100%;
   margin-top: 16px;
   margin-bottom: 30px;
 }
@@ -32,7 +32,7 @@ nav ul li input{
   border: none;
   padding-bottom: 10px;
   border-bottom: 1px solid #7A7A7A;
-  width: 718px;
+  width: 90vh;
   background-image: url(../img/magnifying-glass\ 1.svg);
   background-repeat: no-repeat;
   background-position:right;
@@ -144,8 +144,15 @@ section .product {
   text-align: center;
 }
 
-section .product a {
+section .product ul{
+  list-style: none;
   
+}
+
+section .product ul li .red{
+  color: #F8475F;
+  width: 11.39px;
+  height: 10px;
 }
 
 /*/////////////////////////////////////////////////////////////////////////
@@ -172,8 +179,10 @@ section .product a {
   width: 100%;
 }
 
-.newsLatter .form input {
+.newsLatter .form input,
+.newsLatter .form input:focus  {
   background: #FFFFFF;
+  outline: none;
   border-radius: 5px;
   border: none;
   margin-right: 10px;
@@ -187,6 +196,7 @@ section .product a {
   color: #FFF;
   font-size: 14px;
   font-weight: 700;
+  outline: none;
   height: 48px;
   border: none;
   background: #000000;
