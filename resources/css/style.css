@@ -133,7 +133,7 @@ section .slideshow .dots a:focus {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
-  padding-bottom: 124px;
+  padding-bottom: 69px;
   
 }
 
@@ -162,7 +162,7 @@ section .product ul{
 }
 
 .product ul:hover .black-button{
-    display: inline;
+    visibility: visible;
 }
 
 .product ul:hover {
@@ -172,7 +172,7 @@ section .product ul{
 
 
 .product ul .black-button {
-  display: none;
+  visibility: hidden;
   width: 125.28px;
   height: 32.42px;
   margin-bottom: 14.41px;
