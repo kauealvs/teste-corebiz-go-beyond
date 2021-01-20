@@ -32,7 +32,7 @@ function checkNull(quantity, value) {
 
 function checkLastPrice(lastPrice) {
     var lastPrice1 = ` <p class"lastPrice"> de R$ ${lastPrice}</p></>`;
-    lastPriceNone = `<p class"lastPrice" style="display:none;"> de R$ ${lastPrice}</p>`;
+    var lastPriceNone = `<p class"lastPrice" style="display:none;"> de R$ ${lastPrice}</p>`;
     if(lastPrice == null){
         return lastPriceNone;
     } else {
@@ -46,7 +46,7 @@ function makeShowcase(products) {
         const image = products[i].imageUrl;
         const stars = products[i].stars;
         let lastPrice = products[i].listPrice;
-        const price = products[i].price; 
+        let price = products[i].price; 
         let quantity = products[i].installments[0];
         let value = products[i].installments[0];
         if(quantity != null || quantity != undefined || value != null || value != undefined){
@@ -54,6 +54,7 @@ function makeShowcase(products) {
             quantity = products[i].installments[0].quantity;
         }
         const div = document.createElement('div');
+        price = price.toString();
         div.className = 'product';
         div.innerHTML = `
         <ul>
