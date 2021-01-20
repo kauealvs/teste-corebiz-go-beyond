@@ -7,11 +7,16 @@
     text-decoration: none;
 }
 
+body{
+  background-color: #E5E5E5;
+}
+
 header .logo-corebiz{
     margin-bottom: 18px;
 }
 
 .newsLatter {
+    
     display: flex;
     align-items: center;
     justify-content: center;
