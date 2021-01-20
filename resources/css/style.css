@@ -24,9 +24,20 @@ nav{
 nav ul {
   list-style: none;
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
 }
+
+
+nav ul .search-bar2{
+  display: none;
+}
+
+nav ul .bars{
+  display: none;
+}
+
 
 nav ul li input{
   border: none;
@@ -101,14 +112,14 @@ section .slideshow .dots{
   height: 10%;
 }
 
-section .slideshow .dots .dot a {
+section .slideshow .dots a {
   color: #BDBDBD;
   font-size: 30px;
 }
 
-section .slideshow .dots .dot a:hover,
-section .slideshow .dots .dot a:active,
-section .slideshow .dots .dot a:focus {
+section .slideshow .dots a:hover,
+section .slideshow .dots a:active,
+section .slideshow .dots a:focus {
   color: #F8475F;
 }
 
@@ -122,6 +133,7 @@ section .slideshow .dots .dot a:focus {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
+  padding-bottom: 124px;
   
 }
 
@@ -149,6 +161,25 @@ section .product ul{
   
 }
 
+.product ul:hover .black-button{
+    display: inline;
+}
+
+.product ul:hover {
+  background-color: #E6E8EA;
+}
+
+
+
+.product ul .black-button {
+  display: none;
+  width: 125.28px;
+  height: 32.42px;
+  margin-bottom: 14.41px;
+  background: #000000;
+  border-radius: 5px;
+}
+
 section .product ul li .red{
   color: #F8475F;
   width: 11.39px;
@@ -165,7 +196,6 @@ section .product ul li .red{
   flex-direction: row;
   flex-wrap: wrap;
   background-color: #F2F2F2;
-  margin-top: 124px;
   width: 100%;
   height: 146px;
   padding-top: 24px;
@@ -191,7 +221,7 @@ section .product ul li .red{
   height: 48px;
 }
 
-.newsLatter .form button {
+.black-button {
   width: 140px;
   color: #FFF;
   font-size: 14px;

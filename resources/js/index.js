@@ -21,12 +21,22 @@ function starRate(star) {
 }
 
 function checkNull(quantity, value) {
-    var p = `<p class"quantity">ou ${quantity} em ${value} de R$ </>`;
-    var pNone = `<p class"quantity"></>`;
+    var p = `<p class"quantity">ou em ${quantity}x de R$ ${value} </>`;
+    var pNone = `<p class"quantity" style="display:none">ou em ${quantity}x de R$ ${value} </>`;
     if(quantity == null || value == null || quantity == undefined || value == undefined) {
         return pNone;
     } else {
         return p;
+    }
+}
+
+function checkLastPrice(lastPrice) {
+    var lastPrice1 = ` <p class"lastPrice"> de R$ ${lastPrice}</p></>`;
+    lastPriceNone = `<p class"lastPrice" style="display:none;"> de R$ ${lastPrice}</p>`;
+    if(lastPrice == null){
+        return lastPriceNone;
+    } else {
+        return lastPrice1;
     }
 }
 
@@ -35,17 +45,14 @@ function makeShowcase(products) {
         const productName = products[i].productName;
         const image = products[i].imageUrl;
         const stars = products[i].stars;
-        const lastPrice = products[i].listPrice;
+        let lastPrice = products[i].listPrice;
         const price = products[i].price; 
-        let quantity = products[i].installments[0].quantity;
-        let value = products[i].installments[0].value;
-        if(quantity == null || quantity == undefined || value == null || value == undefined){
-            alert("oi");
-            value = products[i].installments[0];
-            quantity = products[i].installments[0];
+        let quantity = products[i].installments[0];
+        let value = products[i].installments[0];
+        if(quantity != null || quantity != undefined || value != null || value != undefined){
+            value = products[i].installments[0].value;
+            quantity = products[i].installments[0].quantity;
         }
-        console.log("quantidade " + quantity);
-        console.log("valor " + value);
         const div = document.createElement('div');
         div.className = 'product';
         div.innerHTML = `
@@ -54,12 +61,15 @@ function makeShowcase(products) {
                 <a href="#" target="_blank">
                     <img src="${image}" alt="${productName}">
                 </a>
-                <h3 class="title">${productName}</h3>
-                ${starRate(stars)}
-                <p class"lastPrice"> de R$ ${lastPrice}</p>
-                <h2 class"price">Por R$ ${price}</h2>
-                ${checkNull(quantity, value)}
             </li>
+            <li>
+            <h3 class="title">${productName}</h3>
+            ${starRate(stars)}
+            ${checkLastPrice(lastPrice)}
+            <h2 class="price">Por R$ ${price}</h2>
+            ${checkNull(quantity, value)}
+            </li>
+            <button class="black-button">Comprar</button>
          </ul>`;
         showcase.append(div);
     }

@@ -1,23 +1,222 @@
 @media only screen and (max-width: 320px){
-    nav ul li input{
+    
+
+    nav{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 13px;
+        justify-content: space-evenly;
+    }
+
+    nav .logo-corebiz img {
+        height: 25px;
+        width: 102.45999908447266px;
+        left: 0px;
+        top: 0px;
+        border-radius: 0px;
+    }
+    
+    nav ul .bars{
+       display: flex;
+    }
+
+    nav ul .search-bar{
         width: 10vh;
+        display: none;
+    }
+
+    nav ul .search-bar2{
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul .search-bar2 input{
+        width: 30vh;
     }
 
     nav ul .my-account {
         display: none;
     }
 
-    section .slideshow .slide h1,
+    section .slide{
+        width: 100%;
+    }
+
+    .banner{
+        width: 100%;
+        height: 191.2px;
+        background-repeat: no-repeat;
+        background-image: url(../img/image\ 2.png);
+        background-size: auto;
+    }
+
     section .slideshow .slide h2 {
-        width: 100vh;
+        position: absolute;
+        padding-bottom: 20px;
+        height: 131.1346435546875px;
+        width: 277px;
+        left: 1%;
+        top: 112.5909423828125px;      
+        text-align: left;
         font-weight: 900;
         font-size: 30px;
+    }
+
+    section .slideshow .dots{
+        width: 10%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 5px;
+        position: absolute;
+        height: 10%;
+      }
+
+      section .slideshow .dots .dot1{
+            color: #F8475F;
+      }
+
+      .newsLatter{
+          width: 100%;
+          height: 100%;
+          flex-direction: column;
+          text-align: center;
+          padding-left: 5%;
+      }
+
+      .newsLatter .form input,
+      .newsLatter .form input:focus  {
+            background: #FFFFFF;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            outline: none;
+            border-radius: 5px;
+            border: none;
+            width: 90%;
+            height: 48px;
+    } 
+
+    .black-button{
+        width: 90%;
+    }
+
+    .newsLatter form{
+        width: 100%;
+        margin-right: 20px;
     }
 
 }
 
 
 @media screen and (max-width: 600px) {
+    nav{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 13px;
+        justify-content: space-evenly;
+    }
+
+    nav .logo-corebiz img {
+        height: 25px;
+        width: 102.45999908447266px;
+        left: 0px;
+        top: 0px;
+        border-radius: 0px;
+    }
+    
+    nav ul .bars{
+       display: flex;
+    }
+
+    nav ul .search-bar{
+        width: 10vh;
+        display: none;
+    }
+
+    nav ul .search-bar2{
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul .search-bar2 input{
+        width: 30vh;
+    }
+
+    nav ul .my-account {
+        display: none;
+    }
+
+    section .slide{
+        width: 100%;
+    }
+
+    .banner{
+        width: 100%;
+        height: 191.2px;
+        background-repeat: no-repeat;
+        background-image: url(../img/image\ 2.png);
+        background-size: auto;
+    }
+
+    section .slideshow .slide h2 {
+        position: absolute;
+        padding-bottom: 20px;
+        height: 131.1346435546875px;
+        width: 277px;
+        left: 1%;
+        top: 112.5909423828125px;      
+        text-align: left;
+        font-weight: 900;
+        font-size: 30px;
+    }
+
+    section .slideshow .dots{
+        width: 10%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 5px;
+        position: absolute;
+        height: 10%;
+      }
+
+      section .slideshow .dots .dot1{
+            color: #F8475F;
+      }
+
+      .newsLatter{
+          width: 100%;
+          height: 100%;
+          flex-direction: column;
+          text-align: center;
+          padding-left: 5%;
+      }
+
+      .newsLatter .form input,
+      .newsLatter .form input:focus  {
+            background: #FFFFFF;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            outline: none;
+            border-radius: 5px;
+            border: none;
+            width: 90%;
+            height: 48px;
+    } 
+
+    .black-button{
+        width: 90%;
+    }
+
+    .newsLatter form{
+        width: 100%;
+        margin-right: 20px;
+    }
+
     footer {
         background-color: #000;
         display: flex;
